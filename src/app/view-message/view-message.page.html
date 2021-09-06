@@ -1,35 +1,41 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="toolbar">
     <ion-buttons slot="start">
       <ion-back-button
         [text]="getBackButtonText()"
         defaultHref="/"
+        class="title"
       ></ion-back-button>
     </ion-buttons>
+    <ion-title class="title"> Planejamento </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" *ngIf="message">
-  <ion-item>
-    <ion-icon name="person-circle" color="primary"></ion-icon>
-    <ion-label class="ion-text-wrap">
-      <h2>
-        {{ message.fromName }}
-        <span class="date">
-          <ion-note>{{ message.date }}</ion-note>
-        </span>
-      </h2>
-    </ion-label>
-  </ion-item>
+  <ion-grid>
+    <ion-col>
+      <ion-item>
+        <ion-label class="ion-text-wrap" class="fromName">
+          <h2>
+            {{ message.fromName }}
+            <span class="date">
+              <ion-note>{{ message.date }}</ion-note>
+            </span>
+          </h2>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-grid>
 
   <div class="ion-padding">
-    <h1>{{ message.subject }}</h1>
-    <p>{{ message.message }}</p>
+    <ion-label class="date">{{ message.subject }}</ion-label>
+    <hr />
+    <ion-label color="primary">{{ message.message }}</ion-label>
     <ion-grid>
       <ion-col>
         <div>
           <ion-item>
-            <ion-label>Passagem Aérea</ion-label>
+            <ion-label color="primary">Passagem Aérea</ion-label>
             <ion-select placeholder="Selecione">
               <ion-select-option value="LATAM"
                 >{{ message.airTicket }}</ion-select-option
@@ -45,7 +51,7 @@
       <ion-col>
         <div>
           <ion-item>
-            <ion-label>Estadia</ion-label>
+            <ion-label color="primary">Estadia</ion-label>
             <ion-select placeholder="Selecione">
               <ion-select-option value="LATAM"
                 >{{ message.accommodation }}</ion-select-option
@@ -61,7 +67,7 @@
       <ion-col>
         <div>
           <ion-item>
-            <ion-label>Locomoção</ion-label>
+            <ion-label color="primary">Locomoção</ion-label>
             <ion-select placeholder="Selecione">
               <ion-select-option>{{ message.locomotion }}</ion-select-option>
               <ion-select-option value="AZUL">AZUL</ion-select-option>

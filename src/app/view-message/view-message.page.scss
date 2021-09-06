@@ -38,3 +38,26 @@ h1 {
 p {
   line-height: 22px;
 }
+
+ion-select {
+  color: #400040;
+  --placeholder-color: #400040;
+  --placeholder-opacity: 1;
+}
+
+.date {
+  font-size: 1.75em;
+  color: #04D361;
+}
+
+.toolbar {
+  --background: #6842C2;
+}
+
+.title {
+  --color: #FFFFFF;
+}
+
+.fromName {
+  color: #04D361;
+}

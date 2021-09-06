@@ -20,7 +20,7 @@ export class DataService {
   public messages: Message[] = [
     {
       fromName: 'Rock In Rio',
-      subject: 'Data Evento: 2022',
+      subject: '2022',
       date: '9:32 AM',
       id: 0,
       read: false,
@@ -31,7 +31,7 @@ export class DataService {
     },
     {
       fromName: 'KnotFest',
-      subject: 'Data Evento: dez/2022',
+      subject: 'dez/2022',
       date: '6:12 AM',
       id: 1,
       read: false,
