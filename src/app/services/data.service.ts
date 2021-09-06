@@ -31,7 +31,7 @@ export class DataService {
     },
     {
       fromName: 'KnotFest',
-      subject: 'Data Evento: nov/2022',
+      subject: 'Data Evento: dez/2022',
       date: '6:12 AM',
       id: 1,
       read: false,
