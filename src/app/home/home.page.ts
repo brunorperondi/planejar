@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService, Message } from '../services/data.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { DataService, Message } from '../services/data.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private data: DataService) {}
+  constructor(private data: DataService, private route: Router) {}
 
   refresh(ev) {
     setTimeout(() => {
@@ -17,6 +18,10 @@ export class HomePage {
 
   getMessages(): Message[] {
     return this.data.getMessages();
+  }
+
+  switchPage() {
+    this.route.navigate(['/message/0']);
   }
 
 }
