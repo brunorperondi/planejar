@@ -16,32 +16,25 @@
     <ion-col>
       <ion-item>
         <ion-label class="ion-text-wrap" class="fromName">
-          <h2>
-            {{ message.fromName }}
-            <span class="date">
-              <ion-note>{{ message.date }}</ion-note>
-            </span>
-          </h2>
+          <h2>{{ message.fromName }}</h2>
         </ion-label>
       </ion-item>
     </ion-col>
   </ion-grid>
 
   <div class="ion-padding">
-    <ion-label class="date">{{ message.subject }}</ion-label>
+    <ion-datetime value="2022-10-01" display-format="DD MMM YY"></ion-datetime>
     <hr />
     <ion-label color="primary">{{ message.message }}</ion-label>
     <ion-grid>
       <ion-col>
         <div>
           <ion-item>
-            <ion-label color="primary">Passagem Aérea</ion-label>
-            <ion-select placeholder="Selecione">
-              <ion-select-option value="LATAM"
-                >{{ message.airTicket }}</ion-select-option
-              >
-              <ion-select-option value="AZUL">AZUL</ion-select-option>
-            </ion-select>
+            <ion-label position="fixed" color="primary">Passagem</ion-label>
+            <ion-input
+              value="{{ message.airTicket }}"
+              color="primary"
+            ></ion-input>
           </ion-item>
         </div>
       </ion-col>
@@ -51,13 +44,11 @@
       <ion-col>
         <div>
           <ion-item>
-            <ion-label color="primary">Estadia</ion-label>
-            <ion-select placeholder="Selecione">
-              <ion-select-option value="LATAM"
-                >{{ message.accommodation }}</ion-select-option
-              >
-              <ion-select-option value="AZUL">AZUL</ion-select-option>
-            </ion-select>
+            <ion-label position="fixed" color="primary">Estadia</ion-label>
+            <ion-input
+              value="{{ message.accommodation }}"
+              color="primary"
+            ></ion-input>
           </ion-item>
         </div>
       </ion-col>
@@ -67,18 +58,22 @@
       <ion-col>
         <div>
           <ion-item>
-            <ion-label color="primary">Locomoção</ion-label>
-            <ion-select placeholder="Selecione">
-              <ion-select-option>{{ message.locomotion }}</ion-select-option>
-              <ion-select-option value="AZUL">AZUL</ion-select-option>
-            </ion-select>
+            <ion-label position="fixed" color="primary">Locomoção</ion-label>
+            <ion-input
+              value="{{ message.locomotion }}"
+              color="primary"
+            ></ion-input>
           </ion-item>
         </div>
       </ion-col>
     </ion-grid>
 
-    <div class="ion-text-end">
-      <ion-button class="title">Adicionar evento</ion-button>
-    </div>
+    <ion-item>
+      <ion-label color="primary">Situação</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option>{{ message.situation }}</ion-select-option>
+        <ion-select-option>Concluido</ion-select-option>
+      </ion-select>
+    </ion-item>
   </div>
 </ion-content>
