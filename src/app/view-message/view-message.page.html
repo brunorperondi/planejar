@@ -30,11 +30,11 @@
       <ion-col>
         <div>
           <ion-item>
-            <ion-label position="fixed" color="primary">Passagem</ion-label>
-            <ion-input
-              value="{{ message.airTicket }}"
-              color="primary"
-            ></ion-input>
+            <ion-label color="primary">Passagem</ion-label>
+            <ion-select placeholder="Selecione">
+              <ion-select-option>{{ message.airTicket }}</ion-select-option>
+              <ion-select-option>Gol</ion-select-option>
+            </ion-select>
           </ion-item>
         </div>
       </ion-col>
@@ -44,11 +44,11 @@
       <ion-col>
         <div>
           <ion-item>
-            <ion-label position="fixed" color="primary">Estadia</ion-label>
-            <ion-input
-              value="{{ message.accommodation }}"
-              color="primary"
-            ></ion-input>
+            <ion-label color="primary">Estadia</ion-label>
+            <ion-select placeholder="Selecione">
+              <ion-select-option>{{ message.accommodation }}</ion-select-option>
+              <ion-select-option>Aluguel</ion-select-option>
+            </ion-select>
           </ion-item>
         </div>
       </ion-col>
@@ -58,11 +58,11 @@
       <ion-col>
         <div>
           <ion-item>
-            <ion-label position="fixed" color="primary">Locomoção</ion-label>
-            <ion-input
-              value="{{ message.locomotion }}"
-              color="primary"
-            ></ion-input>
+            <ion-label color="primary">Locomoção</ion-label>
+            <ion-select placeholder="Selecione">
+              <ion-select-option>{{ message.locomotion }}</ion-select-option>
+              <ion-select-option>Aluguel</ion-select-option>
+            </ion-select>
           </ion-item>
         </div>
       </ion-col>
