@@ -19,7 +19,7 @@
       </ion-item>
 
       <ion-item-options side="start">
-        <ion-item-option [routerLinkActive]="['edit', contact.id]">
+        <ion-item-option [routerLinkActive]="['edit', contact.id.toString()]">
           <ion-icon slot="icon-only" name="create" color="secondary"></ion-icon>
         </ion-item-option>
         <ion-item-option (click)="delete(contact)">
@@ -30,7 +30,7 @@
   </ion-list>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="secondary" [routerLinkActive]="['new']">
+    <ion-fab-button color="primary" [routerLinkActive]="['new']">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
