@@ -1,7 +1,10 @@
 {
   "name": "Planejar",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular",
   "id": "16124da3"
